@@ -1,6 +1,8 @@
 Git tag:- to assign a meaningful name to the commit id
 Git fork:- it will copy a repo into ur github accounts
 Git clone:- it will download a repo from remote to local or where ever you want
+git remote remove origin:- it will remove existing repo url
+
 
 Organizations in GitHub
 ================
@@ -36,3 +38,10 @@ Organizations in GitHub
   25 git log
   26 git tag -a mohan-tag 4a1eb2767b4b5d3504de18a1601812ec90fc6177 -m "assgined a name using tags"
   27 git log
+    54 git remote -v
+  55 git remote remove origin
+  56 git remote -v
+  57 git remote add origin https://github.com/Flipkart-App-25/flipkart-wishlist-svc.git
+  58 git remote -v
+  59 git remote remove origin
+  60 git remote -v
