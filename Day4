@@ -1,1 +1,38 @@
 Git tag:- to assign a meaningful name to the commit id
+Git fork:- it will copy a repo into ur github accounts
+Git clone:- it will download a repo from remote to local or where ever you want
+
+Organizations in GitHub
+================
+
+	Ø There is a app which is having multiple microservices 
+	Ø Each svc requires one custom repo
+	
+# git commands
+
+   2 ls
+   3 git status
+   4 git add .
+   5 git status
+   6 git commit -m "created a file called day4"
+   7 git log
+   8 git tag -a ac3bc02f520fe240c317eb0fb2784a242adcaafd -m "day4 file"
+   9 git log
+  10 git tag -a day4 file -m 4cf229abc30342e5a91bcc4d85be67817845263b
+  11 git tag -a day4 -m "4cf229abc30342e5a91bcc4d85be67817845263b"
+  12 git log
+  13 git status
+  14 git branch
+  15 git push origin main
+  16 git remote -v
+  17 git config --global user.name "Msocial123"
+  18 git config --global user.email "muralisocial123@gmail.com"
+  19 git push origin main
+  20 git push origin main
+  21 git log
+  22 git tag -a murali-tag 4cf229abc30342e5a91bcc4d85be67817845263b -m "assigned a name to my commit id"
+  23 git log
+  24 git tag -a mohan-tag4a1eb2767b4b5d3504de18a1601812ec90fc6177 -m "assgined a name using tags"
+  25 git log
+  26 git tag -a mohan-tag 4a1eb2767b4b5d3504de18a1601812ec90fc6177 -m "assgined a name using tags"
+  27 git log
