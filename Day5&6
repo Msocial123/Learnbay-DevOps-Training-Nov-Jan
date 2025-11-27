@@ -1,0 +1,55 @@
+	1. Clean code
+	2. Secure code
+	3. Maintainable code
+	4. Compliance with coding standards 
+
+Why ?
+=====
+
+	Ø To detect bugs early
+	Ø  improve security 
+	Ø Enforces coding standards 
+	Ø Integrate with cicd
+	Ø Work with all major lngs
+
+
+Key concepts of Sonarqube
+=======================
+
+	1. Code smell:- non-breaking issues but reduce maintainability , ex:- long method, duplicate codes, unused variables
+	2. Bugs:- issues that may cause functional failures
+	3. Vulnerability:-  security issues that attackers can exploit , ex:- weak hashing , insecure connections
+	4. HotSpots:- security-sensitive code that needs manual review
+	5. Quality Gate:- a set of rules that decide code is good or not
+
+
+How Sonarqube works internally 
+===========================
+
+	1. Code is analyzed:- using sonar scanner or ci pipeline plugin 
+	2. Result are sent to sonarqube server
+	3. Dashboard visualize issues
+	4. Developers fix code
+
+
+Maven
+======
+
+Pom:- project object model
+
+	Maven builds files called 👇
+	
+	1. War file:- web archive :- for maven based app's
+	2. Jar file:- java archive:- for java based app's
+	3. Ear file:- enterprise archive:- for enterprise level app's
+
+
+Maven commands
+===============
+
+	1. Mvn --version
+	2. Mvn clean:- it will delete target folder , removes all compiled files, jar, war and ensures a fresh build
+	3. Mvn compile:- it will compile the src inside src/main/java
+	4. Mvn test :- runs tests inside src/test/java
+	5. Mvn package :- it will pkg the compiling code into jar file, war file and ear file
+	6. Mvn deploy :- it will deploy ur war or jar into nexus server , nexus will convert ur war, jar into artifacts, snapshots (developer copy) and release
