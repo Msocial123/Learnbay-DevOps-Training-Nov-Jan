@@ -215,3 +215,91 @@ docker rmi $(docker images -q):- To delete all images at a time
    97  LS
    98  ls
    99  history
+
+
+   # date: 22-12-2025 commands
+       5  ls
+    6  apt install docker.io -y
+    7  docker --version
+    8  ls
+    9  > Dockerfile
+   10  vi Dockerfile
+   11  ls
+   12  car Dockerfile
+   13  cat Dockerfile
+   14  docker images
+   15  docker ps -a
+   16  docker build -t transaction-app:v1.0.0 .
+   17  docker images
+   18  docker run -d --name transaction-app -p 3000:3000 transaction-app:v1.0.0
+   19  docker ps
+   20  docker inspect transaction-app
+   21  curl 172.17.0.2:3000
+   22  docker ps
+   23  docker logs transaction-app
+   24  docker-compose --version
+   25  curl -SL https://github.com/docker/compose/releases/download/v5.0.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+   26  chmod +x /usr/local/bin/docker-compose
+   27  docker-compose --version
+   28  docker ps
+   29  docker rm -f transaction-app
+   30  ls
+   31  > docker-compose.yml
+   32  cat docker-compose.yml
+   33  vi docker-compose.yml
+   34  cat docker-compose.yml
+   35  ls
+   36  docke-compose up -d
+   37  docker-compose up -d
+   38  docker images
+   39  docker ps
+   40  docker exec -it mongodb mongosh
+   41  ls
+   42  docker ps
+   43  docker network ls
+   44  docker inspect transaction-history_default
+   45  ls
+   46  docker-compose down
+   47  docker ps
+   48  docker ps -a
+   49  docker network ls
+   50  docker-compose up -d
+   51  docker ps
+   52  docker network ls
+   53  docker-compose down
+   54  docker images
+   55  docker tag transaction-app:v1.1.0 muralisocial123/transaction-app:v1.1.0
+   56  docker images
+   57  docker login -u muralisocial123
+   58  docker push muralisocial123/transaction-app:v1.1.0
+   59  docker images
+   60  docker tag transaction-app:v1.0.0 muralisocial123/transaction-app:v1.0.0
+   61  docker images
+   62  docker push  muralisocial123/transaction-app:v1.0.0
+   63  docker volume ls
+   64  docker run -it --name c1 -v /demo-dir ubuntu /bin/bash
+   65  ls
+   66  docker ps
+   67  docker ps -a
+   68  docker volume ls
+   69  docker inspect c674dab1117f0ed6efaf0acbe9fc83ed23d76c8c7cee5714b5a9f226af40eb2e
+   70  cd /var/lib/docker/volumes/c
+   71  cd /var/lib/docker/volumes/
+   72  ls
+   73  cd c674dab1117f0ed6efaf0acbe9fc83ed23d76c8c7cee5714b5a9f226af40eb2e
+   74  ls
+   75  cd _data/
+   76  ls
+   77  cd web/
+   78  ls
+   79  exit
+   80  docker ps -a
+   81  docker rm c1
+   82  docker ps -a
+   83  cd /var/lib/docker/volumes/
+   84  ls
+   85  cd c674dab1117f0ed6efaf0acbe9fc83ed23d76c8c7cee5714b5a9f226af40eb2e
+   86  ls
+   87  cd _data/
+   88  ls
+   89  history

@@ -1,0 +1,19 @@
+Docker Volumes
+=============
+
+	Ø Docker volume is nothing but it’s a directory 
+	Ø You are going to declaring a volume as a directory 
+	Ø Volume is a directory inside a container
+	Ø First declare a directory as a volume
+	Ø Volume will be created in one container
+	Ø It is better or good approach to create a volume along with ur container
+	Ø Once container got created its difficult to attach the volume to the container
+	Ø You can share one volume with n.no of containers
+	Ø Volume will not be included when you are going to update ur docker image 
+	Ø Becz volume is going to creating out side of the file system 
+
+
+Types of volumes
+==============
+
+Anonymous volumes:- there is no meaningful name to the volumes
