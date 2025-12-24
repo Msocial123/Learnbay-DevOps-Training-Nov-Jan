@@ -1,0 +1,33 @@
+   25  kubectl get nodes
+   26  cd /root/.kube/
+   27  ls
+   28  cat config
+   29  exit
+   30  ls
+   31  kubectl get nodes
+   32  kubectl top nodes
+   33  kubectl get ns
+   34  kubectl create ns murali-ns
+   35  kubectl get ns
+   36  vi pod.yaml
+   37  ls
+   38  cat pod.yaml
+   39  ls
+   40  mkdir murali
+   41  ls
+   42  mv pod.yaml  murali/
+   43  ls
+   44  cd murali/
+   45  ls
+   46  cat pod.yaml
+   47  ls
+   48  kubectl get pods
+   49  kubectl get pods  -n murali-ns
+   50  kubectl apply -f pod.yaml
+   51  kubectl get pods -n murali-ns
+   52  kubectl describe pod ipl-pod -n murali-ns
+   53  ls
+   54  kubectl get pods -n murali-ns
+   55  kubectl logs ipl-pod -n murali-ns
+   56  ls
+   57  history

@@ -16,4 +16,37 @@ Docker Volumes
 Types of volumes
 ==============
 
-Anonymous volumes:- there is no meaningful name to the volumes
+	1. Anonymous volumes:- there is no meaningful name to the volumes :- /var/lib/docker/volumes
+	2. Named volume:- we  are going to assigning a meaningful name to the volume:- /var/lib/docker/volumes
+	3. Bind volume:- you are going to choosing location where you want to create volume 
+
+How to share one volume with another container 
+========================================
+
+docker run -it --name c4 --privileged=true  --volumes-from c3 ubuntu /bin/bash
+
+--privileged=true :- 
+
+
+Network in Docker
+==============
+
+	Ø Network is 3 types
+
+	1. Bridge network:- it is for prod use, it is a default primary network in docker and it will give one ip add to the container , containers communicate using container names
+	2. Host :- it wont give any ip add for the containers uses hosts network directly , no port mapping required and less secure 
+	3. None:- no networking at all
+
+
+==========================================================================
+
+Why k8s
+=======
+
+Docker draw backs
+================
+	Ø DOCKER ONLY CREATES CONTIANERS NOT MANAGING 
+	Ø Containers are very light weight 
+	Ø Docker will not support self-healing or auto-healing
+	Ø Docker will not handle LB
+Docker will not support AS

@@ -1,0 +1,116 @@
+    1  apt update -y
+    2  vi k8s.sh
+    3  chmod 700 k8s.sh 
+    4  ./k8s.sh 
+    5  aws configure
+    6  eksctl create cluster --name murali-cluster --region sa-east-1 --zones sa-east-1a,sa-east-1b --nodegroup-name murali-ng --node-type c7i.flex.large --nodes 2
+    7  eksctl create cluster --name murali-cluster --region sa-east-1 --zones sa-east-1a,sa-east-1b --nodegroup-name murali-ng --node-type c7i-flex.large --nodes 2
+    8  kubectl get nodes
+    9  ls
+   10  kubectl create namespace argocd
+   11  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+   12  kubectl get ns
+   13  kubectl get all -n argocd
+   14  curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+   15  sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+   16  rm argocd-linux-amd64
+   17  kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+   18  kubectl get all -n argocd
+   19  argocd admin initial-password -n argocd
+   20  argocd login afcc2981639414d879553008aeec7918-655864978.sa-east-1.elb.amazonaws.com:80
+   21  argocd account update-password
+   22  ls
+   23  kubectl get all
+   24  kubectl get ns
+   25  kubectl create ns murali-ns
+   26  kubectl get ns
+   27  kubectl get all -n murali-ns
+   28  kubectl create ns netflix
+   29  kubectl get all -n netflix
+   30  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+   31  ls
+   32  chmod 700 get_helm.sh
+   33  ls
+   34  ./get_helm.sh 
+   35  helm version
+   36  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+   37  helm repo update
+   38  kubectl create namespace monitoring
+   39  kubectl get ns
+   40  helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring
+   41  kubectl get all -n monitoring
+   42  kubectl patch svc prometheus-grafana -n monitoring -p '{"spec": {"type": "LoadBalancer"}}'
+   43  kubectl get all -n monitoring
+   44  kubectl patch svc prometheus-kube-prometheus-prometheus -n monitoring -p '{"spec": {"type": "LoadBalancer"}}'
+   45  kubectl get all -n monitoring
+   46  kubectl --namespace monitoring get secrets prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+   47  kubectl top nodes
+   48  kubectl top pods
+   49  kubectl top pods -n murali-ns
+   50  kubectl top nodes
+   51  eksctl delete cluster --name murali-cluster --region sa-east-1
+   52  ls
+   53  docker --version
+   54  apt install docker.io -y
+   55  docker volume ls
+   56  docker run -it --name c2 -v clahan:/murali ubuntu /bin/bash
+   57  docker volume ls
+   58  docker ps -a
+   59  docker rm c2
+   60  docker ps -a
+   61  docker inspect clahan
+   62  cd /var/lib/docker/volumes
+   63  ls
+   64  cd clahan
+   65  ls
+   66  cd _data/
+   67  ls
+   68  cd ipl
+   69  ls
+   70  exit
+   71  ls
+   72  cd /opt
+   73  ls
+   74  mkdir flipkart
+   75  ls
+   76  cd flipkart/
+   77  ls
+   78  pwd
+   79  exit
+   80  docker run -it --name c3 -v /opt/flipkart:/mohan ubuntu /bin/bash
+   81  docker ps
+   82  docker ps -a
+   83  docker volume ls
+   84  cd /opt/
+   85  ls
+   86  cd flipkart/
+   87  ls
+   88  cd isro/
+   89  ls
+   90  docker run -it --name c4 --privileged=true --volumes-from c3 ubuntu /bin/bash
+   91  docker volume ls
+   92  cd /opt/
+   93  ls
+   94  cd flipkart/
+   95  ls
+   96  docker rm volume clahan
+   97  docker volume rm clahan
+   98  docker volume ls
+   99  docker network ls
+  100  docker run -d --name web1 nginx
+  101  docker ps
+  102  docker inspect web1
+  103  docker network ls
+  104  docker network create mohan-net-bridge
+  105  docker network ls
+  106  docker run -d --name ipl --network mohan-net-bridge nginx
+  107  docker ps
+  108  docker inspect ipl
+  109  docker run -d --name d2 --network mohan-net-bridge ngnix
+  110  docker run -d --name d2 --network mohan-net-bridge nginx
+  111  docker ps
+  112  docker exec -it ipl bash
+  113  docker ps
+  114  docker exec -it d2 bash
+  115  ls
+  116  history
